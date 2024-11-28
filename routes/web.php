@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DentistaController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\ServicioController;
+use App\Http\Controllers\AtencionController;
+use App\Http\Controllers\ReporteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,8 @@ use App\Http\Controllers\ServicioController;
 Route::resource('dentistas', DentistaController::class);
 Route::resource('pacientes', PacienteController::class);
 Route::resource('servicios', ServicioController::class);
+Route::resource('atenciones', AtencionController::class);
+Route::resource('reportes', ReporteController::class);
 
 
 Route::get('/', function () {
