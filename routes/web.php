@@ -6,6 +6,7 @@ use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\AtencionController;
 use App\Http\Controllers\ReporteController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +24,10 @@ Route::resource('pacientes', PacienteController::class);
 Route::resource('servicios', ServicioController::class);
 Route::resource('atenciones', AtencionController::class);
 Route::resource('reportes', ReporteController::class);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    //return view('welcome');
+//    return view('home');
+//});
